@@ -1,0 +1,362 @@
+/* Start variables */
+:root{
+    --maincolor:#10cab7;
+    --seccolor:#2c4755;
+    --background:#f6f6f6;
+    --mainpadding:60px;
+}
+/* End variables */
+/* Start global  */
+.subtitle{
+    margin: 0;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    color: #ebeced;
+    font-size: 100px;
+}
+.subtitle +p{
+    text-align: center;
+    margin-top: -30px;
+    color:#797979;
+    font-size: 20px;
+}
+/* End global */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Work Sans', sans-serif; 
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+/* Small screen */
+@media(min-width: 768px)
+{
+    .container{width: 750px}
+}
+/* Medium screen */
+@media(min-width: 992px)
+{
+    .container{width: 970px}
+}
+/* Large screen */
+@media(min-width: 1200px)
+{
+    .container{width: 1170px}
+}
+/* Create page*/
+.login
+{
+    margin-bottom: 500px;
+    margin-top: 100px;
+}
+/*---------------------------------------------*/
+
+/* Index page*/
+/* Start header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.header img {
+    width: 60px;
+}
+.header .links{
+    position: relative;
+}
+
+.header .links .icons{
+    width:30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icons:hover{cursor: pointer;}
+.header .links .icons:hover span:nth-child(2){
+    width: 100%;
+}
+.header .links .icons span{
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+.header .links .icons span:first-child{
+    width: 100%;
+}
+.header .links .icons span:nth-child(2){
+    width: 60%;
+     transition: 0.3s;
+}
+
+.header .links .icons span:last-child{
+    width: 100%;
+}
+.header .links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width:200px;
+    background-color: #f6f6f6;
+    position: absolute;
+    right:0;
+    margin-top:15px;
+    display: none;
+    z-index: 1;
+}
+.header .links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: -20px;
+}
+.header .links ul li:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+.header .links:hover ul {
+    display: block;
+}
+.header .links ul li a , .logout{
+    text-decoration: none;
+    color:#333;
+    display: block;
+    padding: 15px;
+    color: #333;
+    transition: 0.3s;
+}
+.header .links ul li a:hover, .logout:hover{
+    padding-left: 30px;
+    cursor: pointer;
+}
+.delete_butt_logout:hover{cursor: pointer;}
+/* End header*/
+/* Start wallpaper*/
+.wallpaper {
+    background-image: url('../image/cover.jpg');
+    background-size: cover;
+    height: 900px;
+    position: relative;
+}
+.wallpaper .txt1{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 450px;
+    text-align: center;
+    width: 300px;
+    transform: translate(-50%, -50%);
+
+}
+.wallpaper h1{
+    margin: 0;
+    color:var(--maincolor);
+    font-size: 50px;
+}
+.wallpaper p{
+    line-height: 1.8;
+    font-size: 18px;
+    color:#ffffff;
+}
+/* End wallpaper*/
+
+/* Start Aout*/
+.about{
+    padding-top: var(--mainpadding);
+    padding-bottom: var(--mainpadding);
+    overflow: hidden;
+}
+.about .content{
+    margin-top: 110px;
+    margin-left: 80px;
+    font-size: larger;
+}
+/* end about*/
+/*start booking*/
+.booking{
+    background-color: var(--background);
+    padding-top: var(--mainpadding);
+    padding-bottom: var(--mainpadding);
+}
+ form fieldset{
+    font-size: larger;
+}
+.booking form input, textarea{
+    border: 2px solid #DDD;
+}
+.butt{
+    
+    margin-left: 560px;
+    background-color: var(--maincolor);
+    color: #ffffff;
+    width: fit-content;
+    
+}
+
+.edit_butt{
+    background-color: var(--maincolor);
+    color: #ffffff;
+    width: fit-content;
+    display: inline-block;
+    margin-left: 20px;
+}
+.delete_butt{
+    background-color: red;
+    color: #ffffff;
+    width: fit-content;
+    display: inline-block;
+}
+
+
+.butt_link
+{
+    text-decoration: none;
+    color:#FFFFFF;
+}
+.butt:hover{cursor: pointer;}
+.edit_butt:hover{cursor: pointer;}
+.delete_butt:hover{cursor: pointer;}
+/*End booking*/
+/*Start contact */
+.contact{
+    padding-top: var(--mainpadding);
+    padding-bottom: var(--mainpadding);
+    background-color: #FFFFFF;
+}
+
+/*End About */
+
+/* Start footer*/
+.footer{
+    background-color: var(--seccolor);
+    padding-top: var(--mainpadding);
+    padding-bottom: var(--mainpadding);
+    text-align: center;
+    color:#FFFFFF;
+    font-size: 18px;
+}
+.footer span{
+    color: var(--maincolor);
+    font-weight: bold;
+}
+/*End footer*/
+
+/*------------------------*/
+/* thanks page*/
+
+.thanks
+{
+    margin-bottom: 500px;
+    margin-top: 30px;
+}
+/* style of table */
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: var(--maincolor); 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+/*----------------------------------------------------------*/
+.signup
+{
+    margin-bottom: 100px;
+}
+/*--------------------------------------------------------*/
+.error{color:red;}
+
+.alert
+{
+    padding: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color:green;
+    text-align: center;
+    background-color: rgb(165, 238, 165);
+}
+
+.delete_butt_logout {
+    border: none;
+    width: 100px;
+    background-color: transparent;
+    padding: 11px 110px 10px 0;
+    width: 170px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+table {
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    
+}
+
+ th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: var(--maincolor);
+    color: white;
+    margin-bottom: 10px;
+   
+}
+
+ tr:nth-child(even) {
+    background-color: #E7E9EB;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+td
+{
+    padding-left: 100px;
+    margin-top:10px;
+}
+
+ */
+
+/*  ------------------------------------ */
